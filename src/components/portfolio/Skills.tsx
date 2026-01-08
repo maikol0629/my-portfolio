@@ -53,7 +53,7 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Habilidades <span className="gradient-text">Técnicas</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -71,7 +71,7 @@ const Skills = () => {
               transition={{ delay: categoryIndex * 0.1 }}
               className="p-6 rounded-xl glass"
             >
-              <h3 className="text-xl font-semibold mb-6 text-primary">
+              <h3 className="text-xl font-semibold mb-6 text-foreground">
                 {category.title}
               </h3>
               <div className="space-y-4">
@@ -84,7 +84,7 @@ const Skills = () => {
                     transition={{ delay: categoryIndex * 0.1 + skillIndex * 0.05 }}
                   >
                     <div className="flex justify-between mb-2">
-                      <span className="text-sm font-medium">{skill.name}</span>
+                      <span className="text-sm font-medium text-foreground">{skill.name}</span>
                       <span className="text-xs text-muted-foreground">{skill.level}%</span>
                     </div>
                     <div className="h-2 bg-secondary rounded-full overflow-hidden">

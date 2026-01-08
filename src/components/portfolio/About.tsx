@@ -35,7 +35,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Sobre <span className="gradient-text">Mí</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -88,7 +88,7 @@ const About = () => {
                 className="p-6 rounded-xl glass hover:glow transition-all duration-300 group"
               >
                 <item.icon className="h-8 w-8 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-semibold mb-2">{item.title}</h3>
+                <h3 className="font-semibold mb-2 text-foreground">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.description}</p>
               </motion.div>
             ))}

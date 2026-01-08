@@ -38,7 +38,7 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Proyectos <span className="gradient-text">Destacados</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -66,7 +66,7 @@ const Projects = () => {
               <div className="p-6 -mt-8 relative">
                 <div className="flex items-center gap-2 mb-3">
                   <Code className="h-5 w-5 text-primary" />
-                  <h3 className="text-xl font-bold">{project.title}</h3>
+                  <h3 className="text-xl font-bold text-foreground">{project.title}</h3>
                 </div>
                 
                 <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
@@ -94,8 +94,8 @@ const Projects = () => {
                     className="flex-1 glass" 
                     asChild
                   >
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="h-4 w-4 mr-2" />
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-foreground">
+                      <Github className="h-4 w-4 mr-2 text-foreground" />
                       Código
                     </a>
                   </Button>
@@ -119,8 +119,8 @@ const Projects = () => {
           className="text-center mt-12"
         >
           <Button variant="outline" size="lg" className="glass" asChild>
-            <a href="https://github.com/maikol0629?tab=repositories" target="_blank" rel="noopener noreferrer">
-              <Github className="h-5 w-5 mr-2" />
+            <a href="https://github.com/maikol0629?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-foreground">
+              <Github className="h-5 w-5 mr-2 text-foreground" />
               Ver todos en GitHub
             </a>
           </Button>

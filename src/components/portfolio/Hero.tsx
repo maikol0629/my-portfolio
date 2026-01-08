@@ -51,7 +51,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground"
           >
             Hola, soy{" "}
             <span className="gradient-text">Michael Ruiz</span>
@@ -74,17 +74,17 @@ const Hero = () => {
             transition={{ delay: 0.6 }}
             className="flex items-center justify-center gap-4"
           >
-            <Button variant="outline" size="icon" className="rounded-full glass hover:glow" asChild>
+            <Button variant="outline" size="icon" className="rounded-full glass hover:glow text-foreground border-foreground/30" asChild>
               <a href="https://github.com/maikol0629" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
               </a>
             </Button>
-            <Button variant="outline" size="icon" className="rounded-full glass hover:glow" asChild>
+            <Button variant="outline" size="icon" className="rounded-full glass hover:glow text-foreground border-foreground/30" asChild>
               <a href="https://linkedin.com/in/michael-steven-ruiz-palacio-071469309" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5" />
               </a>
             </Button>
-            <Button variant="outline" size="icon" className="rounded-full glass hover:glow" asChild>
+            <Button variant="outline" size="icon" className="rounded-full glass hover:glow text-foreground border-foreground/30" asChild>
               <a href="mailto:michael.ruiz1@udea.edu.co">
                 <Mail className="h-5 w-5" />
               </a>
@@ -101,7 +101,7 @@ const Hero = () => {
             <Button size="lg" className="glow" onClick={scrollToProjects}>
               Ver Proyectos
             </Button>
-            <Button variant="outline" size="lg" className="glass" asChild>
+            <Button variant="outline" size="lg" className="glass text-foreground border-foreground/30 hover:bg-foreground/10" asChild>
               <a href="#contact">Contáctame</a>
             </Button>
             <Button variant="secondary" size="lg" className="glass" asChild>

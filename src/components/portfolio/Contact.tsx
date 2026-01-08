@@ -36,7 +36,7 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             ¿Trabajamos <span className="gradient-text">Juntos</span>?
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -65,7 +65,7 @@ const Contact = () => {
                 </div>
                 <div className="flex-1">
                   <p className="text-sm text-muted-foreground">{link.label}</p>
-                  <p className="font-medium">{link.value}</p>
+                  <p className="font-medium text-foreground">{link.value}</p>
                 </div>
                 <Send className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </motion.a>
