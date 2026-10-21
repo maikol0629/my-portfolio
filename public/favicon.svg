@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Michael Ruiz">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12303a"/>
+      <stop offset="0.55" stop-color="#0b1016"/>
+      <stop offset="1" stop-color="#241a35"/>
+    </linearGradient>
+    <radialGradient id="teal" cx="0.12" cy="0.1" r="0.55">
+      <stop offset="0" stop-color="#1ae6b3" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#1ae6b3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="purple" cx="0.9" cy="0.92" r="0.55">
+      <stop offset="0" stop-color="#a667e4" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#a667e4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="123" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="123" fill="url(#teal)"/>
+  <rect width="512" height="512" rx="123" fill="url(#purple)"/>
+  <rect x="10" y="10" width="492" height="492" rx="115" fill="none" stroke="#ffffff" stroke-opacity="0.1" stroke-width="4"/>
+  <text x="256" y="256" fill="#f0f5fa" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="225" font-weight="700" text-anchor="middle" dominant-baseline="central" letter-spacing="-8">MR</text>
+</svg>

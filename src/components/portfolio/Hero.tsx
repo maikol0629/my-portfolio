@@ -8,7 +8,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/20" />
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
@@ -75,17 +75,17 @@ const Hero = () => {
             className="flex items-center justify-center gap-4"
           >
             <Button variant="outline" size="icon" className="rounded-full glass hover:glow text-foreground border-foreground/30" asChild>
-              <a href="https://github.com/maikol0629" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/maikol0629" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Michael Ruiz">
                 <Github className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="outline" size="icon" className="rounded-full glass hover:glow text-foreground border-foreground/30" asChild>
-              <a href="https://linkedin.com/in/michael-steven-ruiz-palacio-071469309" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/in/michael-steven-ruiz-palacio-071469309" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Michael Ruiz">
                 <Linkedin className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="outline" size="icon" className="rounded-full glass hover:glow text-foreground border-foreground/30" asChild>
-              <a href="mailto:michael.ruiz1@udea.edu.co">
+              <a href="mailto:maikol0629@gmail.com" aria-label="Enviar correo a Michael Ruiz">
                 <Mail className="h-5 w-5" />
               </a>
             </Button>
@@ -112,22 +112,22 @@ const Hero = () => {
             </Button>
           </motion.div>
         </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-          >
-            <ChevronDown className="h-6 w-6 text-muted-foreground" />
-          </motion.div>
-        </motion.div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 1 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden sm:block"
+      >
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 2 }}
+        >
+          <ChevronDown className="h-6 w-6 text-muted-foreground" />
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

@@ -18,6 +18,7 @@ const Footer = () => {
               href="https://github.com/maikol0629"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub de Michael Ruiz"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Github className="h-5 w-5" />
@@ -26,12 +27,14 @@ const Footer = () => {
               href="https://linkedin.com/in/michael-steven-ruiz-palacio-071469309"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn de Michael Ruiz"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="mailto:michael.ruiz1@udea.edu.co"
+              href="mailto:maikol0629@gmail.com"
+              aria-label="Enviar correo a Michael Ruiz"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Mail className="h-5 w-5" />

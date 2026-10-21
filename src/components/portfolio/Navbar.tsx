@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
-  { label: "Inicio", href: "#" },
+  { label: "Inicio", href: "#inicio" },
   { label: "Sobre mí", href: "#about" },
   { label: "Habilidades", href: "#skills" },
   { label: "Proyectos", href: "#projects" },
@@ -14,6 +14,12 @@ const navItems = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navClassName = isMobileMenuOpen
+    ? "bg-background/95 backdrop-blur-md border-b border-border/50 py-4"
+    : isScrolled
+      ? "glass py-4"
+      : "py-6";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,14 +33,12 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass py-4" : "py-6"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navClassName}`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="text-xl font-bold gradient-text">
+          <a href="#inicio" className="text-xl font-bold gradient-text">
             MR
           </a>
 
@@ -56,6 +60,9 @@ const Navbar = () => {
             variant="ghost"
             size="icon"
             className="md:hidden"
+            aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -66,6 +73,7 @@ const Navbar = () => {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
+              id="mobile-menu"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}

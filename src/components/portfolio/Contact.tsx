@@ -1,13 +1,12 @@
 import { motion } from "framer-motion";
 import { Mail, Github, Linkedin, Send, MapPin } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const contactLinks = [
   {
     icon: Mail,
     label: "Email",
-    value: "michael.ruiz1@udea.edu.co",
-    href: "mailto:michael.ruiz1@udea.edu.co",
+    value: "maikol0629@gmail.com",
+    href: "mailto:maikol0629@gmail.com",
   },
   {
     icon: Github,
@@ -25,7 +24,7 @@ const contactLinks = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 relative">
+    <section id="contact" className="py-24 relative scroll-mt-20">
       <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent" />
       
       <div className="container mx-auto px-6 relative z-10">
@@ -80,10 +79,19 @@ const Contact = () => {
             transition={{ delay: 0.4 }}
             className="text-center"
           >
-            <div className="inline-flex items-center gap-2 text-muted-foreground">
+            <div className="inline-flex flex-wrap items-center justify-center gap-2 text-muted-foreground">
               <MapPin className="h-4 w-4" />
               <span>Medellín, Colombia</span>
             </div>
+            <p className="text-sm text-muted-foreground mt-3">
+              ¿Prefieres el correo institucional?{" "}
+              <a
+                href="mailto:michael.ruiz1@udea.edu.co"
+                className="text-primary hover:underline"
+              >
+                michael.ruiz1@udea.edu.co
+              </a>
+            </p>
           </motion.div>
         </div>
       </div>

@@ -26,7 +26,7 @@ const highlights = [
 
 const About = () => {
   return (
-    <section id="about" className="py-24 relative">
+    <section id="about" className="py-24 relative scroll-mt-20">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

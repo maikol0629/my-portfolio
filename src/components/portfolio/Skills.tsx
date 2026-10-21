@@ -1,50 +1,35 @@
 import { motion } from "framer-motion";
+import { Code2, LayoutTemplate, Database, Wrench } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const skillCategories = [
   {
+    icon: Code2,
     title: "Lenguajes",
-    skills: [
-      { name: "JavaScript", level: 90 },
-      { name: "Python", level: 85 },
-      { name: "TypeScript", level: 80 },
-      { name: "Java", level: 75 },
-      { name: "Kotlin", level: 70 },
-    ],
+    skills: ["JavaScript", "TypeScript", "Python", "Java", "Kotlin", "SQL"],
   },
   {
+    icon: LayoutTemplate,
     title: "Frontend",
-    skills: [
-      { name: "React", level: 85 },
-      { name: "Next.js", level: 75 },
-      { name: "HTML/CSS", level: 90 },
-      { name: "Tailwind CSS", level: 85 },
-    ],
+    skills: ["React", "Next.js", "HTML/CSS", "Tailwind CSS"],
   },
   {
-    title: "Backend & DB",
-    skills: [
-      { name: "PostgreSQL", level: 80 },
-      { name: "MySQL", level: 75 },
-      { name: "Supabase", level: 70 },
-      { name: "Node.js", level: 75 },
-    ],
+    icon: Database,
+    title: "Backend y datos",
+    skills: ["Node.js", "PostgreSQL", "MySQL", "Supabase", "REST APIs"],
   },
   {
+    icon: Wrench,
     title: "Herramientas",
-    skills: [
-      { name: "Git/GitHub", level: 85 },
-      { name: "Docker", level: 65 },
-      { name: "Linux", level: 70 },
-      { name: "VS Code", level: 90 },
-    ],
+    skills: ["Git/GitHub", "Docker", "Linux", "Android Studio", "VS Code"],
   },
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 relative bg-secondary/30">
+    <section id="skills" className="py-24 relative bg-secondary/30 scroll-mt-20">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -61,7 +46,7 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
@@ -69,33 +54,30 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: categoryIndex * 0.1 }}
-              className="p-6 rounded-xl glass"
+              className="p-6 rounded-xl glass hover:glow transition-all duration-300"
             >
-              <h3 className="text-xl font-semibold mb-6 text-foreground">
-                {category.title}
-              </h3>
-              <div className="space-y-4">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="p-2 rounded-lg bg-primary/10">
+                  <category.icon className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground">{category.title}</h3>
+              </div>
+
+              <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
-                    key={skill.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    key={skill}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: categoryIndex * 0.1 + skillIndex * 0.05 }}
                   >
-                    <div className="flex justify-between mb-2">
-                      <span className="text-sm font-medium text-foreground">{skill.name}</span>
-                      <span className="text-xs text-muted-foreground">{skill.level}%</span>
-                    </div>
-                    <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: categoryIndex * 0.1 + skillIndex * 0.05 }}
-                        className="h-full bg-gradient-to-r from-primary to-accent rounded-full"
-                      />
-                    </div>
+                    <Badge
+                      variant="secondary"
+                      className="px-3 py-1 text-sm font-normal border border-transparent hover:border-primary/40 hover:text-foreground transition-colors"
+                    >
+                      {skill}
+                    </Badge>
                   </motion.div>
                 ))}
               </div>
